@@ -1,0 +1,152 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Quickbite - Delicious Food Delivered Fast</title>
+    <link rel="stylesheet" href="styles.css" />
+  </head>
+  <body>
+    <header>
+      <div class="container nav-container">
+        <h1 class="logo">Quickbite</h1>
+        <nav>
+          <ul class="nav-links">
+            <li><a href="#home">Home</a></li>
+            <li><a href="#menu">Menu</a></li>
+            <li><a href="#order">Order</a></li>
+            <li><a href="#tracking">Track Your Order</a></li>
+            <li><a href="#about">About</a></li>
+            <li><a href="#contact">Contact</a></li>
+          </ul>
+        </nav>
+      </div>
+    </header>
+
+    <section id="home" class="hero">
+      <div class="hero-content">
+        <h2>Your Favorite Meals, Delivered Fast</h2>
+        <p>Fresh, Delicious, and Delivered to Your Doorstep</p>
+        <a href="#order" class="btn-primary">Order Now</a>
+      </div>
+    </section>
+
+    <section id="menu" class="menu">
+      <div class="container">
+        <h2>Our Menu</h2>
+        <div class="menu-items">
+          <div class="menu-item">
+            <img src="IMG-20250406-WA0007.jpg" alt="Meal 1" />
+            <h3>Continental Dishes</h3>
+            <p>Fresh and delicious continental meals prepared just for you.</p>
+          </div>
+          <div class="menu-item">
+            <img src="IMG-20250406-WA0002.jpg" alt="Meal 2" />
+            <h3>Local Specialties</h3>
+            <p>Authentic local dishes that will satisfy your cravings.</p>
+          </div>
+          <div class="menu-item">
+            <img src="beverage.jpg" alt="Meal 3" />
+            <h3>Snacks & Beverages</h3>
+            <p>Quick bites and refreshing drinks for any time of the day.</p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <section id="order" class="order">
+      <div class="container order-container">
+        <h2>Make an Order</h2>
+        <form id="order-form">
+          <input type="text" id="name" placeholder="Your Name" required />
+          <input type="email" id="email" placeholder="Your Email" required />
+
+          <select id="meal" required>
+            <option value="">Select a Meal</option>
+
+            <!-- Continental Dishes -->
+            <option value="continental_pasta">Pasta Primavera</option>
+            <option value="continental_steak">
+              Grilled Steak with Veggies
+            </option>
+            <option value="continental_pizza">Margherita Pizza</option>
+
+            <!-- Local Specialties -->
+            <option value="local_pounded_yam">
+              Pounded Yam with Egusi Soup
+            </option>
+            <option value="local_jollof">
+              Jollof Rice with Grilled Chicken
+            </option>
+            <option value="local_akara">Akara (Bean Cakes) with Pap</option>
+
+            <!-- Snacks & Beverages -->
+            <option value="snacks_samosa">Samosa (Beef/Chicken)</option>
+            <option value="snacks_puffpuff">
+              Puff Puff (Sweet Fried Dough)
+            </option>
+            <option value="snacks_beverages">Fresh Orange Juice</option>
+          </select>
+
+          <button type="submit" class="btn-primary">Order Now</button>
+        </form>
+      </div>
+    </section>
+
+    <section id="tracking" class="tracking">
+      <div class="container">
+        <h2>Track Your Order</h2>
+        <div class="tracking-content">
+          <input type="text" id="order-id" placeholder="Enter Order ID" />
+          <button class="btn-primary" onclick="trackOrder()">Track</button>
+        </div>
+      </div>
+    </section>
+
+    <!-- Modal for order tracking details -->
+    <div id="tracking-modal" class="modal">
+      <div class="modal-content">
+        <span class="close-btn" onclick="closeModal()">&times;</span>
+        <h3>Order Tracking Details</h3>
+        <div class="tracking-details">
+          <p><strong>Order ID:</strong> #123456789</p>
+          <p><strong>Status:</strong> In Transit</p>
+          <p><strong>Estimated Delivery:</strong> 20 minutes</p>
+          <p><strong>Current Location:</strong> Delivery Hub</p>
+          <p><strong>Delivery Address:</strong> 45, Quickbite Lane, City</p>
+          <p><strong>Customer:</strong> John Doe</p>
+        </div>
+      </div>
+    </div>
+
+    <section id="about" class="about">
+      <div class="container">
+        <h2>About Us</h2>
+        <p>
+          At Quickbite, we bring you the best of local and continental dishes,
+          all prepared with love and served fresh to your doorstep.
+        </p>
+      </div>
+    </section>
+
+    <section id="contact" class="contact">
+      <div class="container">
+        <h2>Contact Us</h2>
+        <form id="contact-form">
+          <input type="text" id="name" placeholder="Your Name" required />
+          <input type="email" id="email" placeholder="Your Email" required />
+          <textarea id="message" placeholder="Your Message" required></textarea>
+          <button type="submit" class="btn-primary">Send Message</button>
+        </form>
+      </div>
+    </section>
+
+    <footer>
+      <div class="container">
+        <p>&copy; 2025 Quickbite. All rights reserved.</p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+  </body>
+</html>
